@@ -3,9 +3,12 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import reducers from "./reducers";
+
+
 import Home from "./components/home";
 import Results from "./components/results";
-import reducers from "./reducers";
+
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
