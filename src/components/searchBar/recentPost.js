@@ -4,9 +4,18 @@ import SearchBar from './searchBar';
 import * as actions from '../../actions';
 
 export default class RecentPost extends Component {
+    constructor(props){
+        super(props);
 
+        actions.fetchRecentPost = actions.fetchRecentPost();
+    }
+
+    
     componentDidMount(){
+        // console.log("CompnentDidMount:")
+
         actions.fetchRecentPost();
+
     }
     render() {
         return (
