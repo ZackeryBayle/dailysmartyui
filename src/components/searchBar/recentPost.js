@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import SearchBar from './searchBar';
+import * as actions from '../../actions';
 
 export default class RecentPost extends Component {
+
+    componentDidMount(){
+        actions.fetchRecentPost();
+    }
     render() {
         return (
             <div className="recent-post-wrapper">
@@ -20,4 +27,5 @@ export default class RecentPost extends Component {
             </div>
         );
     }
+    
 }
