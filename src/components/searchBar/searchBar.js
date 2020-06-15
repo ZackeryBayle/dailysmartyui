@@ -7,13 +7,11 @@ class SearchBar extends Component {
 
     constructor(props) {
         super(props);
-
-        this.handleFormSubmit = this.handleFormSubmit.bind(this)
     }
 
     handleFormSubmit(query) {
         console.log("Query", query);
-        this.props.history.push('/results');
+        this.props.onSubmit(query);
 
     }
 
@@ -29,7 +27,7 @@ class SearchBar extends Component {
 
         return (
             <div className="search-form">
-                <form className="searchbar" onSubmit={this.handleFormSubmit}> 
+                <form className="searchbar" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}> 
                     <Field name="query" component={this.renderInput} />
                 </form>
             </div>

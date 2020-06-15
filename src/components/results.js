@@ -6,6 +6,7 @@ export default class example extends Component {
 
     handleSearchbarSubmit(query){
         console.log(query);
+        
     }
 
     render() {
